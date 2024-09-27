@@ -1,0 +1,13 @@
+body {
+    background-color: rgba(241, 244, 249, 1) !important;
+}
+
+/* Customizing the sidebar */
+[data-testid="stSidebar"] {
+    background-color: rgba(241, 244, 249, 1) !important;
+}
+
+/* Customizing the main content area */
+[data-testid="stAppViewContainer"] {
+    background-color: rgba(241, 244, 249, 1) !important;
+}
