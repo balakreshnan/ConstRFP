@@ -16,3 +16,4 @@ PyMuPDF
 python-docx
 matplotlib
 Pillow
+streamlit_quill

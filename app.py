@@ -1,7 +1,6 @@
 import streamlit as st
 
-from labelver import labelverfication   
-from yoloinf import yoloinf
+from rfpapp import rfpapp
 
 # Set page size
 st.set_page_config(
