@@ -2,6 +2,7 @@ import streamlit as st
 
 from rfpapp import rfpapp
 from about import about
+from watertech import watertech
 
 # Set page size
 st.set_page_config(
@@ -24,12 +25,14 @@ st.sidebar.image("images/rfpapp1-4.png", use_column_width=True)
 
 # Sidebar navigation
 nav_option = st.sidebar.selectbox("Navigation", ["Home", 
-                                                 "RFP Workbench", 
+                                                 "RFP Workbench", "WaterTech",
                                                  "About"])
 
 # Display the selected page
 if nav_option == "RFP Workbench":
     rfpapp()
+elif nav_option == "WaterTech": 
+    watertech()
 elif nav_option == "About":
     about()
 #elif nav_option == "VisionAgent":
