@@ -1,6 +1,7 @@
 import streamlit as st
 
 from rfpapp import rfpapp
+from about import about
 
 # Set page size
 st.set_page_config(
@@ -18,21 +19,19 @@ def load_css(file_path):
 # Call the function to load the CSS
 load_css("styles.css")
 
-st.logo("bblogo1.png")
-st.sidebar.image("bblogo1.png", use_column_width=True)
+st.logo("images/rfpapp1-4.png")
+st.sidebar.image("images/rfpapp1-4.png", use_column_width=True)
 
 # Sidebar navigation
 nav_option = st.sidebar.selectbox("Navigation", ["Home", 
-                                                 "Label Verification", "Yoloinf",
-                                                 "Img3D","About"])
+                                                 "RFP Workbench", 
+                                                 "About"])
 
 # Display the selected page
-if nav_option == "Label Verification":
-    labelverfication()
-elif nav_option == "Label Verification":
-    labelverfication()
-elif nav_option == "Yoloinf":
-    yoloinf()
+if nav_option == "RFP Workbench":
+    rfpapp()
+elif nav_option == "About":
+    about()
 #elif nav_option == "VisionAgent":
 #    vaprocess()
 

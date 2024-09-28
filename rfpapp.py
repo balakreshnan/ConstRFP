@@ -155,16 +155,17 @@ def extractrfpresults(user_input1, selected_optionmodel1, pdf_bytes, selected_op
     dstext = processpdfwithprompt(user_input1, selected_optionmodel1, selected_optionsearch)
 
     message_text = [
-    {"role":"system", "content":f"""You are RFP AI agent. Be politely, and provide positive tone answers.
+    {"role":"system", "content":f"""You are RFP/RFQ AI agent. Be politely, and provide positive tone answers.
      Based on the question do a detail analysis on RFP information and provide the best answers.
-     Here is the RFT text tha was provided:
+     Here is the RFP/RFQ content provided:
      {rfttext}
-     Use only the above RFP contenxt for context. But provide results from your knowledge or data source provided.
+
+     Use the data source content provided to answer the question.
      Data Source: {dstext}
 
      if the question is outside the bounds of the RFP, Let the user know answer might be relevant for RFP provided.
      If not sure, ask the user to provide more information."""}, 
-    {"role": "user", "content": f"""{user_input1}. Respond Only the answers with details on why the decision was made."""}]
+    {"role": "user", "content": f"""{user_input1}. Provide summarized content based on the question asked."""}]
 
     response = client.chat.completions.create(
         model= selected_optionmodel1, #"gpt-4-turbo", # model = "deployment_name".
@@ -179,7 +180,7 @@ def extractrfpresults(user_input1, selected_optionmodel1, pdf_bytes, selected_op
 
 # Function to create a Word document
 def create_word_doc(content):
-    doc = Document()
+    doc = docx.Document()
     doc.add_heading('RFP for Project X', 0)
 
     doc.add_paragraph(content)
@@ -190,7 +191,7 @@ def create_word_doc(content):
 # Function to download the Word document
 def download_word_file(doc):
     # Create a BytesIO buffer to store the file
-    buffer = BytesIO()
+    buffer = io.BytesIO()
     
     # Save the document into the buffer
     doc.save(buffer)
@@ -238,10 +239,10 @@ def processpdfwithprompt(user_input1, selected_optionmodel1, selected_optionsear
                     },
                     "fields_mapping": {
                         "content_fields": ["chunk"],
-                        "vector_fields": ["chunkVector"],
-                        "title_field": "name",
-                        "url_field": "location",
-                        "filepath_field": "location",
+                        "vector_fields": ["text_vector"],
+                        "title_field": "title",
+                        "url_field": "title",
+                        "filepath_field": "title",
                         "content_fields_separator": "\n",
                     }
                 }
@@ -328,6 +329,68 @@ def update_quill_rfpcontent(new_content):
 # Define a function to update the content programmatically
 def update_quill_rfpresponse(new_content):
     st.session_state.quill_rfpresponse += new_content
+
+# Define the Linked List Node class
+class Node:
+    def __init__(self, topic_name, content):
+        self.topic_name = topic_name
+        self.content = content
+        self.next = None
+
+# Define the Linked List class
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    # Method to add new node to the list
+    def add(self, topic_name, content):
+        # Check if the topic already exists
+        if self.contains(topic_name):
+            # Update the content of the existing topic
+            self.update(topic_name, content)
+        else:
+            # Add a new node if the topic does not exist
+            new_node = Node(topic_name, content)
+            if not self.head:
+                self.head = new_node
+            else:
+                current = self.head
+                while current.next:
+                    current = current.next
+                current.next = new_node
+   
+    # Method to display the list
+    """
+    def display(self):
+        current = self.head
+        while current:
+            st.write(f"**Topic:** {current.topic_name}")
+            st.write(f"**Content:** {current.content}")
+            st.write("---")
+            current = current.next
+   """
+    def display(self):
+        current = self.head
+        content = ""
+        while current:
+            content += f"**Topic:** {current.topic_name}\n**Content:** {current.content}\n\n"
+            current = current.next
+        return content
+    def contains(self, topic_name):
+        current = self.head
+        while current:
+            if current.topic_name == topic_name:
+                return True
+            current = current.next
+        return False
+
+    def update(self, topic_name, content):
+        current = self.head
+        while current:
+            if current.topic_name == topic_name:
+                current.content = content
+                return
+            current = current.next
 
 def display_pdf_as_iframe(file_path):
     with open(file_path, "rb") as f:
@@ -507,14 +570,15 @@ def rfpapp():
         st.write("RFP Topic List")
         col1, col2 = st.columns([1, 2])
         with col1:
-            rfpquery = st.text_input("Enter your RFP query", "what are qualification or critical success to winning this RFQ")
+            rfpquery = st.text_input("Enter your RFP query", "Show me details on Construction management services experience we have done before")
             selected_optionsearch = st.selectbox("Select Search Type", ["simple", "semantic", "vector", "vector_simple_hybrid", "vector_semantic_hybrid"])
             topic_name = st.text_input("Enter the topic name:", "Introduction")
             # Call the extractproductinfo function
             rfttopics = getrfptopictorespond(rfpquery, selected_optionmodel1, pdf_bytes)
             st.markdown(rfttopics)
             rfpcontent = {"topic": "rftcontent", "result": rfttopics}
-            st.image("pavement1.jpg", use_column_width=True)
+            st.image("railway2.jpg", use_column_width=True)
+            st.image("railway1.jpg", use_column_width=True)
         #rfttopics = getrfptopictorespond(query, selected_optionmodel1, pdf_bytes)
         #st.markdown(rfttopics)
         #st.write("RFP Draft")
@@ -523,12 +587,16 @@ def rfpapp():
             if st.button("rfp content"):
                 # Call the extractproductinfo function
                 result = extractrfpresults(rfpquery, selected_optionmodel1, pdf_bytes, selected_optionsearch)
-                #result = processpdfwithprompt(rfpquery, selected_optionmodel1, selected_optionsearch)
+                #returntxt, citationtxt = processpdfwithprompt(rfpquery, selected_optionmodel1, selected_optionsearch)
                 #st.text_input(value=result)
                 #st.text_input("Output", result)
                 # st.markdown(result, unsafe_allow_html=True)
                 # quill_rfpresponse
+                print(result)
                 #st.session_state.quill_rfpresponse = result changed
+                # Initialize session state for the editor content
+                if "quill_rfpresponse" not in st.session_state:
+                    st.session_state.quill_rfpresponse = ""
                 
                 update_quill_rfpresponse(result)
                
@@ -605,10 +673,11 @@ def rfpapp():
             
         with col2:
             # uploaded_file1 = os.getcwd() + "/Preliminary_Plans.pdf"
-            pdf_file = os.getcwd() + "\\Preliminary_Plans.pdf"
-            print(pdf_file)
+            pdf_file = os.getcwd() + "\\SAMPLE_PLAN-PROF.pdf"
+            #print(pdf_file)
             # Convert PDF pages to images
             images = pdf_to_images(pdf_file, zoom=2.0)
+            #images = ["constr2.jpg"]
 
             # Save the images or show them (optional)
             #for i, img in enumerate(images):
