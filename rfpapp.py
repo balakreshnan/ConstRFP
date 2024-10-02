@@ -509,6 +509,71 @@ def compare_rfq_drawings(uploaded_file, selected_optionmodel, user_input, pdf_fi
 
     return returntxt
 
+def speech_to_text_extract(text, selected_optionmodel1):
+    returntxt = ""
+
+    start_time = time.time()
+
+    message_text = [
+    {"role":"system", "content":"""You are a Lanugage AI Agent, based on the text provided, extract intent and also the value provided.
+     For example change sugar from 5g to 10g. change sugar to 10g.
+     Provide the extracted ingredient and value to update only.     
+     """}, 
+    {"role": "user", "content": f"""Content: {text}."""}]
+
+    response = client.chat.completions.create(
+        model= selected_optionmodel1, #"gpt-4-turbo", # model = "deployment_name".
+        messages=message_text,
+        temperature=0.0,
+        top_p=1,
+        seed=105,
+   )
+
+    returntxt = response.choices[0].message.content + "\n<br>"
+
+    reponse_time = time.time() - start_time 
+
+def recognize_from_microphone():
+    returntxt = ""
+    # This example requires environment variables named "SPEECH_KEY" and "SPEECH_REGION"
+    speech_config = speechsdk.SpeechConfig(subscription=config['SPEECH_KEY'], region=config['SPEECH_REGION'])
+    speech_config.speech_recognition_language="en-US"
+
+    audio_config = speechsdk.audio.AudioConfig(use_default_microphone=True)
+    speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config, audio_config=audio_config)
+
+    print("Speak into your microphone.")
+    speech_recognition_result = speech_recognizer.recognize_once_async().get()
+
+    if speech_recognition_result.reason == speechsdk.ResultReason.RecognizedSpeech:
+        print("Recognized: {}".format(speech_recognition_result.text))
+        st.write(f"Recognized: {speech_recognition_result.text}")
+        speech_to_text_extract(speech_recognition_result.text, "gpt-4o-g")
+        returntxt = speech_recognition_result.text
+    elif speech_recognition_result.reason == speechsdk.ResultReason.NoMatch:
+        print("No speech could be recognized: {}".format(speech_recognition_result.no_match_details))
+    elif speech_recognition_result.reason == speechsdk.ResultReason.Canceled:
+        cancellation_details = speech_recognition_result.cancellation_details
+        print("Speech Recognition canceled: {}".format(cancellation_details.reason))
+        if cancellation_details.reason == speechsdk.CancellationReason.Error:
+            print("Error details: {}".format(cancellation_details.error_details))
+            print("Did you set the speech resource key and region values?")
+    return returntxt
+
+# Initialize session state for input if not already present
+if 'query' not in st.session_state:
+    st.session_state.query = 'Summarize the content of the RFP'
+
+if 'rfpquery' not in st.session_state:
+    st.session_state.rfpquery = 'Show me details on Construction management services experience we have done before'
+
+# Function to update the session state when the button is clicked
+def update_input(query):
+    st.session_state.query = query
+
+def update_input1(content):
+    st.session_state.rfpquery = content
+
 def rfpapp():
     st.write("## Microsoft Construction Copilot")
     count = 0
@@ -554,6 +619,13 @@ def rfpapp():
     with tabs[1]:
         st.write("Search for information in RFP")        
         query = st.text_input("Enter your search query", "Summarize the content of the RFP")
+        #if st.button("Record Audio", key="speech1"):
+        ##    #record_audio()
+        #    querytxt = recognize_from_microphone()
+        #    print('Text recognized:', querytxt)
+        #    # query = querytxt
+        #    update_input(querytxt)
+        #query = st.text_area("Enter your search query", st.session_state.query)
         
         if st.button("Search"):
             # Call the extractproductinfo function
@@ -573,7 +645,15 @@ def rfpapp():
         st.write("RFP Topic List")
         col1, col2 = st.columns([1, 2])
         with col1:
+            #if st.button("Record Audio", key="speech2"):
+            #    #record_audio()
+            #    querytxt = recognize_from_microphone()
+            #    print('Text recognized:', querytxt)
+            #    # query = querytxt
+            #    update_input1(querytxt)
+            #rfpquery = st.text_area("Enter your RFP query", st.session_state.rfpquery)
             rfpquery = st.text_input("Enter your RFP query", "Show me details on Construction management services experience we have done before")
+            
             selected_optionsearch = st.selectbox("Select Search Type", ["simple", "semantic", "vector", "vector_simple_hybrid", "vector_semantic_hybrid"])
             topic_name = st.text_input("Enter the topic name:", "Introduction")
             # Call the extractproductinfo function
