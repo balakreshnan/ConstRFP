@@ -755,7 +755,8 @@ def rfpapp():
             
         with col2:
             # uploaded_file1 = os.getcwd() + "/Preliminary_Plans.pdf"
-            pdf_file = os.getcwd() + "\\SAMPLE_PLAN-PROF.pdf"
+            #pdf_file = os.getcwd() + "\\SAMPLE_PLAN-PROF.pdf"
+            pdf_file = os.path.join(os.getcwd(), "SAMPLE_PLAN-PROF.pdf")
             #print(pdf_file)
             # Convert PDF pages to images
             images = pdf_to_images(pdf_file, zoom=2.0)
