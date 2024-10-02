@@ -510,7 +510,7 @@ def compare_rfq_drawings(uploaded_file, selected_optionmodel, user_input, pdf_fi
     return returntxt
 
 def rfpapp():
-    st.write("Hello from rfpapp.py")
+    st.write("## Microsoft Construction Copilot")
     count = 0
     temp_file_path = ""
     pdf_bytes = None

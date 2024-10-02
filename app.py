@@ -6,7 +6,7 @@ from watertech import watertech
 
 # Set page size
 st.set_page_config(
-    page_title="Gen AI Application Validation",
+    page_title="Microsoft Construction Copilot",
     page_icon=":rocket:",
     layout="wide",  # or "centered"
     initial_sidebar_state="expanded"  # or "collapsed"
@@ -20,19 +20,27 @@ def load_css(file_path):
 # Call the function to load the CSS
 load_css("styles.css")
 
-st.logo("images/rfpapp1-4.png")
-st.sidebar.image("images/rfpapp1-4.png", use_column_width=True)
+st.logo("images/aeclogofy24.png")
+st.sidebar.image("images/aeclogofy24.png", use_column_width=True)
 
 # Sidebar navigation
 nav_option = st.sidebar.selectbox("Navigation", ["Home", 
-                                                 "RFP Workbench", "WaterTech",
+                                                 "RFP Assistant", #"WaterTech",
+                                                 "PM Assistant", "Schedule Assistant",
+                                                 "Project Status",
                                                  "About"])
 
 # Display the selected page
-if nav_option == "RFP Workbench":
+if nav_option == "RFP Assistant":
     rfpapp()
-elif nav_option == "WaterTech": 
-    watertech()
+elif nav_option == "PM Assistant":
+    rfpapp()
+elif nav_option == "Schedule Assistant":
+    rfpapp()
+elif nav_option == "Project Status":
+    rfpapp()
+#elif nav_option == "WaterTech": 
+#    watertech()
 elif nav_option == "About":
     about()
 #elif nav_option == "VisionAgent":
