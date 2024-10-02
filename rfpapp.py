@@ -561,6 +561,9 @@ def rfpapp():
             # st.text_input("Output", result)
             # st.markdown(result, unsafe_allow_html=True)
             #st.session_state.quill_rfpcontent = result
+            # Initialize session state for the editor content
+            if "quill_rfpcontent" not in st.session_state:
+                st.session_state.quill_rfpcontent = ""
             update_quill_rfpcontent(result)
             # print('RFP Content:', result)
             #rfpcontent1 = st_quill(result)
@@ -598,8 +601,7 @@ def rfpapp():
                 if "quill_rfpresponse" not in st.session_state:
                     st.session_state.quill_rfpresponse = ""
                 
-                update_quill_rfpresponse(result)
-               
+                update_quill_rfpresponse(result)               
 
                 rfpcontent = {"topic": "rftcontent", "result": result}
             rfpresponse1 = st_quill(st.session_state.quill_rfpresponse, placeholder="Enter your rich text here...",    key="editor_rfp_response")
