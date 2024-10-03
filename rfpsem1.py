@@ -29,9 +29,6 @@ from azure.core.credentials import AzureKeyCredential
 from service_settings import ServiceSettings
 from plugins.rfprag import rfpchat
 from plugins.historyrfp import historyrfpchat
-from dotenv import load_dotenv
-
-load_dotenv()
 
 st.set_page_config(layout="wide")
 
@@ -54,24 +51,24 @@ def setup_kernel_and_agent():
 global_kernel, global_chat_completion = setup_kernel_and_agent()
 
 # A helper method to invoke the agent with the user input
-async def invoke_agent(input_text):
-       
-    # Enable planning
-    execution_settings = AzureChatPromptExecutionSettings(tool_choice="auto")
-    execution_settings.function_choice_behavior = FunctionChoiceBehavior.Auto()
-
-    st.session_state["history"].add_user_message(input_text)
-
-    result = (await global_chat_completion.get_chat_message_contents(
-            chat_history=st.session_state["history"],
-            settings=execution_settings,
-            kernel=global_kernel,
-            arguments=KernelArguments(),
-        ))[0]
-    print(str(result))
-
-    st.session_state["history"].add_assistant_message(str(result))
-    return str(result)
+#async def invoke_agent(input_text):
+#       
+#    # Enable planning
+#    execution_settings = AzureChatPromptExecutionSettings(tool_choice="auto")
+#    execution_settings.function_choice_behavior = FunctionChoiceBehavior.Auto()
+#
+#    st.session_state["history"].add_user_message(input_text)
+#
+#    result = (await global_chat_completion.get_chat_message_contents(
+#            chat_history=st.session_state["history"],
+#            settings=execution_settings,
+#            kernel=global_kernel,
+#            arguments=KernelArguments(),
+#        ))[0]
+#    print(str(result))
+#
+#    st.session_state["history"].add_assistant_message(str(result))
+#    return str(result)
 
 AGENT_NAME = "FileSearch"
 AGENT_INSTRUCTIONS = "Find answers to the user's questions in the provided file."
@@ -82,15 +79,15 @@ use_azure_openai = True
 #vector_store = AzureAISearchStore()
 
 # A helper method to invoke the agent with the user input
-#async def invoke_agent(agent: OpenAIAssistantAgent, thread_id: str, input: str) -> None:
-#    """Invoke the agent with the user input."""
-#    await agent.add_chat_message(thread_id=thread_id, message=ChatMessageContent(role=AuthorRole.USER, content=input))
-#
-#    print(f"# {AuthorRole.USER}: '{input}'")#
-#
-#    async for content in agent.invoke(thread_id=thread_id):
-#        if content.role != AuthorRole.TOOL:
-#            print(f"# {content.role}: {content.content}")
+async def invoke_agent(agent: OpenAIAssistantAgent, thread_id: str, input: str) -> None:
+    """Invoke the agent with the user input."""
+    await agent.add_chat_message(thread_id=thread_id, message=ChatMessageContent(role=AuthorRole.USER, content=input))
+
+    print(f"# {AuthorRole.USER}: '{input}'")
+
+    async for content in agent.invoke(thread_id=thread_id):
+        if content.role != AuthorRole.TOOL:
+            print(f"# {content.role}: {content.content}")
 
 async def rfpsem():
 
@@ -170,7 +167,11 @@ async def rfpsemagent():
     #search_client = SearchIndexClient(endpoint=os.getenv("AZURE_AI_SEARCH_ENDPOINT"), credential=os.getenv("AZURE_AI_SEARCH_KEY"), 
     #                                  index_name=index_name)
     search_client = SearchIndexClient(endpoint=os.getenv("AZURE_AI_SEARCH_ENDPOINT"), credential=AzureKeyCredential(os.getenv("AZURE_AI_SEARCH_KEY")))
-    vector_store = AzureAISearchStore(search_index_client=search_client)
+    #vector_store = AzureAISearchStore(search_index_client=search_client)
+    #store = AzureAISearchStore()
+    store = AzureAISearchStore(search_index_client=search_client)
+    assert store is not None
+    
 
     # Create the agent configuration
     if use_azure_openai:
@@ -204,5 +205,5 @@ async def rfpsemagent():
         await agent.delete_thread(thread_id)
         await agent.delete()
 
-#asyncio.run(rfpsemagent())  
-asyncio.run(rfpsem())  
+asyncio.run(rfpsemagent())  
+#asyncio.run(rfpsem())  
