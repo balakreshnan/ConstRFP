@@ -23,12 +23,15 @@ from semantic_kernel.contents.chat_message_content import ChatMessageContent
 from semantic_kernel.contents.utils.author_role import AuthorRole
 from semantic_kernel.kernel import Kernel
 from semantic_kernel.connectors.memory.azure_ai_search import AzureAISearchStore
-from azure.search.documents.indexes import SearchIndexClient
+#from azure.search.documents.indexes import SearchIndexClient
 from azure.core.credentials import AzureKeyCredential
 
 from service_settings import ServiceSettings
 from plugins.rfprag import rfpchat
 from plugins.historyrfp import historyrfpchat
+from dotenv import load_dotenv
+
+load_dotenv()
 
 st.set_page_config(layout="wide")
 
@@ -50,25 +53,6 @@ def setup_kernel_and_agent():
 # Initialize kernel and function as global variables
 global_kernel, global_chat_completion = setup_kernel_and_agent()
 
-# A helper method to invoke the agent with the user input
-#async def invoke_agent(input_text):
-#       
-#    # Enable planning
-#    execution_settings = AzureChatPromptExecutionSettings(tool_choice="auto")
-#    execution_settings.function_choice_behavior = FunctionChoiceBehavior.Auto()
-#
-#    st.session_state["history"].add_user_message(input_text)
-#
-#    result = (await global_chat_completion.get_chat_message_contents(
-#            chat_history=st.session_state["history"],
-#            settings=execution_settings,
-#            kernel=global_kernel,
-#            arguments=KernelArguments(),
-#        ))[0]
-#    print(str(result))
-#
-#    st.session_state["history"].add_assistant_message(str(result))
-#    return str(result)
 
 AGENT_NAME = "FileSearch"
 AGENT_INSTRUCTIONS = "Find answers to the user's questions in the provided file."
@@ -89,68 +73,6 @@ async def invoke_agent(agent: OpenAIAssistantAgent, thread_id: str, input: str) 
         if content.role != AuthorRole.TOOL:
             print(f"# {content.role}: {content.content}")
 
-async def rfpsem():
-
-    #st.sidebar.title("Virtuoso - Customer Account Planning Assistant")
-    #st.sidebar.image("https://i.imgur.com/jxSzGbM.jpg", use_column_width=True)
-    st.write("## Microsoft Construction Copilot")
-    count = 0
-    temp_file_path = ""
-    pdf_bytes = None
-    rfpcontent = {}
-    rfplist = []
-    #tab1, tab2, tab3, tab4 = st.tabs('RFP PDF', 'RFP Research', 'Draft', 'Create Word')
-    modeloptions1 = ["gpt-4o-2", "gpt-4o-g", "gpt-4o", "gpt-4-turbo", "gpt-35-turbo"]
-
-    # Create a dropdown menu using selectbox method
-    selected_optionmodel1 = st.selectbox("Select an Model:", modeloptions1)
-    count += 1
-
-    col1, col2 = st.columns([2, 1])
-
-    with col1:
-        st.title("Microsoft Construction Copilot")
-        reset = st.button('Reset Messages')
-
-        if reset:
-                st.write('Sure thing!')
-                history = ChatHistory()
-                st.session_state["history"] = history
-                st.session_state["history"].add_system_message("You are a helpful assistant.") 
-                print("completed reset")
-                reset = False
-
-        st.write("Upload RFP PDF file")
-        uploaded_file = st.file_uploader("Choose a PDF file", type="pdf", key="pdf_file0")
-        if uploaded_file is not None:
-            # Display the PDF in an iframe
-            pdf_bytes = uploaded_file.read()  # Read the PDF as bytes
-            st.download_button("Download PDF", pdf_bytes, file_name="uploaded_pdf.pdf")
-
-            # Convert to base64
-            base64_pdf = base64.b64encode(pdf_bytes).decode('utf-8')
-
-        if "history" not in st.session_state:  
-            history = ChatHistory()
-            st.session_state["history"] = history
-            st.session_state["history"].add_system_message("You are a helpful assistant.") 
-
-        for msg in st.session_state["history"]:
-            print(msg.role + ":" + msg.content)
-            if msg.role != AuthorRole.TOOL:
-                with st.chat_message(msg.role):
-                    st.markdown(msg.content)
-
-        # React to user input
-        if prompt := st.chat_input("Tell me about an email you want to send...(or something else)"):
-            # Display user message in chat message container
-            st.chat_message("user").markdown(prompt)
-            result = await invoke_agent(prompt)
-            # Display assistant response in chat message container
-            with st.chat_message("assistant"):
-                st.markdown(result)
-    with col2:
-        st.write("## RFP Chat")
 
 async def rfpsemagent():
     # Create the instance of the Kernel
