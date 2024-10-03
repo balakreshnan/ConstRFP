@@ -81,17 +81,6 @@ use_azure_openai = True
 
 #vector_store = AzureAISearchStore()
 
-# A helper method to invoke the agent with the user input
-#async def invoke_agent(agent: OpenAIAssistantAgent, thread_id: str, input: str) -> None:
-#    """Invoke the agent with the user input."""
-#    await agent.add_chat_message(thread_id=thread_id, message=ChatMessageContent(role=AuthorRole.USER, content=input))
-#
-#    print(f"# {AuthorRole.USER}: '{input}'")#
-#
-#    async for content in agent.invoke(thread_id=thread_id):
-#        if content.role != AuthorRole.TOOL:
-#            print(f"# {content.role}: {content.content}")
-
 async def rfpsem():
 
     #st.sidebar.title("Virtuoso - Customer Account Planning Assistant")
@@ -155,54 +144,5 @@ async def rfpsem():
     with col2:
         st.write("## RFP Chat")
 
-async def rfpsemagent():
-    # Create the instance of the Kernel
-    kernel = Kernel()
 
-    # Define a service_id for the sample
-    service_id = "agent"
-
-    # Get the path to the travelinfo.txt file
-    pdf_file_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "resources", "Virginia Railway Express_2.pdf")
-
-    #search_client = SearchIndexClient(endpoint="https://<your-search-service-name>.search.windows.net", credential="<your-search-service-key>")
-    index_name = os.getenv("AZURE_AI_SEARCH_INDEX1")
-    #search_client = SearchIndexClient(endpoint=os.getenv("AZURE_AI_SEARCH_ENDPOINT"), credential=os.getenv("AZURE_AI_SEARCH_KEY"), 
-    #                                  index_name=index_name)
-    search_client = SearchIndexClient(endpoint=os.getenv("AZURE_AI_SEARCH_ENDPOINT"), credential=AzureKeyCredential(os.getenv("AZURE_AI_SEARCH_KEY")))
-    vector_store = AzureAISearchStore(search_index_client=search_client)
-
-    # Create the agent configuration
-    if use_azure_openai:
-        agent = await AzureAssistantAgent.create(
-            kernel=kernel,
-            service_id=service_id,
-            name=AGENT_NAME,
-            instructions=AGENT_INSTRUCTIONS,
-            enable_file_search=True,
-            vector_store_filenames=[pdf_file_path],
-        )
-    else:
-        agent = await OpenAIAssistantAgent.create(
-            kernel=kernel,
-            service_id=service_id,
-            name=AGENT_NAME,
-            instructions=AGENT_INSTRUCTIONS,
-            enable_file_search=True,
-            vector_store_filenames=[pdf_file_path],
-        )
-
-    # Define a thread and invoke the agent with the user input
-    thread_id = await agent.create_thread()
-
-    try:
-        await invoke_agent(agent, thread_id=thread_id, input="Who is the youngest employee?")
-        await invoke_agent(agent, thread_id=thread_id, input="Who works in sales?")
-        await invoke_agent(agent, thread_id=thread_id, input="I have a customer request, who can help me?")
-    finally:
-        [await agent.delete_file(file_id) for file_id in agent.file_search_file_ids]
-        await agent.delete_thread(thread_id)
-        await agent.delete()
-
-#asyncio.run(rfpsemagent())  
 asyncio.run(rfpsem())  

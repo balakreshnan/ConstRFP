@@ -18,5 +18,4 @@ matplotlib
 Pillow
 streamlit_quill
 semantic-kernel
-azure-search-documents
 semantic-kernel[azure]
