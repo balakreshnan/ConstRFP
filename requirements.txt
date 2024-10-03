@@ -17,3 +17,5 @@ python-docx
 matplotlib
 Pillow
 streamlit_quill
+semantic-kernel
+azure-search-documents

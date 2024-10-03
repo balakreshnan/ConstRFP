@@ -10,3 +10,4 @@ yolov5s.pt
 runs/
 cuda-int4-rtn-block-32/
 pdfdocs/
+.env
