@@ -32,6 +32,9 @@ from semantic_kernel.connectors.ai.open_ai import AzureTextCompletion, AzureText
 from semantic_kernel.connectors.memory.azure_cognitive_search import AzureCognitiveSearchMemoryStore
 from semantic_kernel.core_plugins import TextMemoryPlugin
 from semantic_kernel.memory import SemanticTextMemory
+from semantic_kernel.connectors.ai.open_ai import AzureChatCompletion, AzureTextEmbedding
+from semantic_kernel.connectors.memory.azure_ai_search import AzureAISearchStore
+from semantic_kernel.connectors.memory.azure_ai_search import AzureAISearchCollection
 
 from service_settings import ServiceSettings
 from plugins.rfprag import rfpchat
@@ -47,6 +50,7 @@ from semantic_kernel.data import (
     vectorstoremodel,
 )
 import pandas as pd
+import semantic_kernel as sk
 
 from dotenv import load_dotenv
 
@@ -127,6 +131,7 @@ async def search_acs_memory_questions(memory: SemanticTextMemory) -> None:
         "Summarize the content of the PDF file",
     ]
 
+
     for question in questions:
         print(f"Question: {question}")
         result = await memory.search(COLLECTION_NAME, question)
@@ -145,6 +150,37 @@ async def invoke_agent(agent: OpenAIAssistantAgent, thread_id: str, input: str) 
             #print(f"# {content.role}: {content.content}")
             returntxt = content.content
     return returntxt
+
+# Initialize your Semantic Kernel
+kernel = sk.Kernel()
+
+# Azure Cognitive Search credentials
+azure_search_endpoint = os.getenv("AZURE_AI_SEARCH_ENDPOINT")
+azure_search_api_key = os.getenv("AZURE_AI_SEARCH_API_KEY")
+azure_search_index_name = os.getenv("AZURE_AI_SEARCH_INDEX1")
+
+# Initialize the Azure AI Search collection
+#azure_search_collection = AzureAISearchCollection(
+#    endpoint=azure_search_endpoint,
+#    api_key=azure_search_api_key,
+#    index_name=azure_search_index_name
+#)
+
+azure_search_collection = AzureAISearchCollection(
+    collection_name="vec", data_model_definition=vec_definition, data_model_type=vec
+)
+
+# Add the Azure search collection to the kernel
+# kernel.memory.add_collection(azure_search_collection)
+
+
+# Example function to perform a search in Azure Cognitive Search
+def search_azure(query):
+    search_results = azure_search_collection.search(query=query, top_k=5)
+
+    # Print search results
+    for result in search_results:
+        print(f"Document ID: {result.id}, Content: {result.metadata.get('chunk', 'No content available')}")
 
 
 async def rfpsemagent():
@@ -207,7 +243,9 @@ async def rfpsemagent():
             # await populate_memory(memory)
 
             #print("Asking questions... (manually)")
-            await search_acs_memory_questions(memory)
+            #await search_acs_memory_questions(memory)
+            query = "Summarize the content of the PDF file"
+            search_azure(query)
 
         # await invoke_agent(agent, thread_id=thread_id, input="Who is the youngest employee?")
         # await invoke_agent(agent, thread_id=thread_id, input="Who works in sales?")
@@ -240,5 +278,4 @@ async def rfpsemagent():
         await agent.delete_thread(thread_id)
         await agent.delete()
 
-asyncio.run(rfpsemagent())  
-#asyncio.run(rfpsem())  
+asyncio.run(rfpsemagent())  # Run the agent 
