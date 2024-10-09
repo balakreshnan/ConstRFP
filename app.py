@@ -4,6 +4,7 @@ from rfpapp import rfpapp
 from about import about
 from watertech import watertech
 #from rfpsem import rfpsem
+from resumeiq import resumeiq
 
 # Set page size
 st.set_page_config(
@@ -29,7 +30,7 @@ nav_option = st.sidebar.selectbox("Navigation", ["Home",
                                                  "RFP Assistant", #"WaterTech",
                                                  "PM Assistant", "Schedule Assistant",
                                                  "Project Status",
-                                                 "RFP Agents",
+                                                 "RFP Agents", "ResumeIQ",
                                                  "About"])
 
 # Display the selected page
@@ -45,9 +46,9 @@ elif nav_option == "Project Status":
 #    watertech()
 #elif nav_option == "RFP Agents":
 #    rfpsem()
+elif nav_option == "ResumeIQ":
+    resumeiq()
 elif nav_option == "About":
     about()
-#elif nav_option == "VisionAgent":
-#    vaprocess()
 
 #st.sidebar.image("microsoft-logo-png-transparent-20.png", use_column_width=True)
