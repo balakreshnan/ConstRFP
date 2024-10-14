@@ -152,7 +152,7 @@ def extractrfpresults(user_input1, selected_optionmodel1, pdf_bytes, selected_op
 
     # print('RFP Text:', rfttext)
 
-    dstext = processpdfwithprompt(user_input1, selected_optionmodel1, selected_optionsearch)
+    dstext, citationtext = processpdfwithprompt(user_input1, selected_optionmodel1, selected_optionsearch)
 
     message_text = [
     {"role":"system", "content":f"""You are RFP/RFQ AI agent. Be politely, and provide positive tone answers.
@@ -161,7 +161,7 @@ def extractrfpresults(user_input1, selected_optionmodel1, pdf_bytes, selected_op
      {rfttext}
 
      Use the data source content provided to answer the question.
-     Data Source: {dstext}
+     Data Source: {citationtext}
 
      if the question is outside the bounds of the RFP, Let the user know answer might be relevant for RFP provided.
      If not sure, ask the user to provide more information."""}, 
