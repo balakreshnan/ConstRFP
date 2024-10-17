@@ -19,3 +19,4 @@ Pillow
 streamlit_quill
 semantic-kernel
 semantic-kernel[azure]
+qrcode[pil]
