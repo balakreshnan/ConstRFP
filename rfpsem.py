@@ -98,7 +98,7 @@ async def rfpsem():
     selected_optionmodel1 = st.selectbox("Select an Model:", modeloptions1)
     count += 1
 
-    col1, col2 = st.columns([2, 1])
+    col1, col2 = st.columns([1, 2])
 
     with col1:
         st.title("Microsoft Construction Copilot")
@@ -114,6 +114,9 @@ async def rfpsem():
 
         st.write("Upload RFP PDF file")
         uploaded_file = st.file_uploader("Choose a PDF file", type="pdf", key="pdf_file0")
+    with col2:
+        st.write("## RFP Chat")
+        
         if uploaded_file is not None:
             # Display the PDF in an iframe
             pdf_bytes = uploaded_file.read()  # Read the PDF as bytes
@@ -141,8 +144,6 @@ async def rfpsem():
             # Display assistant response in chat message container
             with st.chat_message("assistant"):
                 st.markdown(result)
-    with col2:
-        st.write("## RFP Chat")
 
 
 asyncio.run(rfpsem())  

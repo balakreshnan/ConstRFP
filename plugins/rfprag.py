@@ -8,7 +8,10 @@ import io
 import os
 from typing import Annotated
 
-class rfpchat:    
+class rfpchat:   
+    pdf_bytes: bytes = None
+    query: str = None
+     
     @kernel_function(
         name="summarise_rfp",
         description="Summarize rfp infomration.",

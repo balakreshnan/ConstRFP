@@ -10,6 +10,9 @@ import os
 from typing import Annotated
 
 class historyrfpchat:    
+    pdf_bytes: bytes = None
+    query: str = None
+    
     @kernel_function(
         name="history_rfp",
         description="Summarize rfp infomration.",
