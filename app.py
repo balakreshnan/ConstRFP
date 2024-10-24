@@ -6,6 +6,7 @@ from watertech import watertech
 #from rfpsem import rfpsem
 from resumeiq import resumeiq
 from qrcreator import qrcreator
+# from rfpsem2 import agenticrfp
 
 # Set page size
 st.set_page_config(
@@ -32,6 +33,7 @@ nav_option = st.sidebar.selectbox("Navigation", ["Home",
                                                  "PM Assistant", "Schedule Assistant",
                                                  "Project Status",
                                                  "RFP Agents", "QR Code Generator", 
+                                                 # "Agentic RFP",
                                                  "About"])
 
 # Display the selected page
@@ -45,6 +47,8 @@ elif nav_option == "Project Status":
     rfpapp()
 elif nav_option == "QR Code Generator":
     qrcreator()
+#elif nav_option == "Agentic RFP":
+#    agenticrfp()
 #elif nav_option == "WaterTech": 
 #    watertech()
 #elif nav_option == "RFP Agents":
