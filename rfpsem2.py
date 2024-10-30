@@ -66,6 +66,8 @@ async def invoke_agent(agent: ChatCompletionAgent, input: str, chat: ChatHistory
     chat.add_user_message(input)
 
     print(f"# {AuthorRole.USER}: '{input}'")
+    print(f"User: {input}")
+    print(f"chat: {chat}")
 
     if streaming:
         contents = []
