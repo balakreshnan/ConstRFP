@@ -4,7 +4,7 @@ gradio
 PyPDF2
 streamlit
 azure-kusto-data
-pyautogen
+ag2
 vision-agent
 azure-cognitiveservices-speech
 bs4
