@@ -1,0 +1,221 @@
+vendor_id,firm_name,firm_size,hq_state,hq_city,region,dbe_certified,mbe_certified,wbe_certified,year_founded,employees,naics_code,default_payment_terms,ach_enrolled,w9_on_file,risk_rating,emr_safety_rating,insurance_certificate_current,prequalification_tier,contracts_won,credit_rating,tax_id_masked
+VEN-0001,Alder CM Group Inc.,Large,AZ,Tucson,West,False,True,False,1960,2017,541330,Net 30,True,True,Low,0.94,True,Platinum,177,A,90-2037872
+VEN-0002,Alder CM Group LLC,Small,DC,Washington,South,True,False,False,1994,44,236220,Net 45,True,True,Low,1.06,True,Platinum,158,A,82-1999941
+VEN-0003,Alder Consulting Engineers Corp.,National,OK,Tulsa,South,False,False,False,1969,20423,541380,Net 30,True,True,Low,1.0,True,Bronze,162,B,87-2228106
+VEN-0004,Alder Technical Services,Mid,LA,New Orleans,South,False,False,True,1993,322,541618,Net 30,True,True,Low,0.88,True,Bronze,156,A,21-5528829
+VEN-0005,Ashford Partners PC,Small,LA,Baton Rouge,South,True,False,False,2000,38,236220,Net 30,True,True,Low,0.69,True,Silver,161,A,41-7675615
+VEN-0006,Atlas & Associates LLP,Small,NM,Santa Fe,West,False,False,False,1984,33,236220,Net 45,True,True,Low,0.67,True,Gold,184,A,72-4059205
+VEN-0007,Atlas Consulting Engineers,Small,CT,Hartford,Northeast,False,False,False,1997,24,541380,Net 30,True,True,Medium,1.22,True,Unrated,176,C,60-7693754
+VEN-0008,Beckett CM Group LLC,Small,UT,Ogden,West,True,False,False,1961,33,541330,Net 60,True,True,Low,0.89,True,Gold,146,C,29-5232182
+VEN-0009,Beckett Construction Services LLC,Mid,MD,Rockville,South,False,False,False,1967,368,541330,Net 60,True,True,Low,1.15,True,Gold,173,B,28-1453697
+VEN-0010,Beckett Construction Services PC,Small,GA,Savannah,South,False,False,False,1972,56,541618,Net 30,True,True,Medium,1.09,True,Gold,162,A,61-4804057
+VEN-0011,Beckett Consulting Engineers Corp.,National,MO,Kansas City,Midwest,False,False,False,1980,14651,541611,Net 45,True,True,Low,1.38,True,Platinum,144,A,70-4300181
+VEN-0012,Blueline & Associates PC,Small,MD,Frederick,South,False,False,False,2011,29,541380,Net 30,True,True,Medium,0.76,True,Bronze,163,B,21-7641067
+VEN-0013,Blueline Consulting Engineers Inc.,National,AZ,Tempe,West,False,False,False,2010,8205,541618,Net 30,False,True,Low,1.04,True,Platinum,143,A,77-3336239
+VEN-0014,Blueline Consulting Engineers LLC,Mid,UT,Ogden,West,False,False,False,1966,159,541330,Net 30,False,True,Low,1.07,True,Bronze,148,A,78-3547391
+VEN-0015,Blueline Project Services Corp.,Small,CT,Hartford,Northeast,True,False,False,2004,41,541330,Net 45,True,True,Low,1.04,True,Platinum,168,A,41-4209584
+VEN-0016,Blueline Project Services LLP,Small,OK,Oklahoma City,South,True,False,False,1990,25,541618,Net 45,True,True,Low,1.03,True,Gold,139,B,81-4398871
+VEN-0017,Blueline Technical Services Inc.,Large,NV,Reno,West,False,True,False,2008,2106,541330,Net 30,False,True,Medium,1.13,True,Gold,154,C,38-2579162
+VEN-0018,Brightwater CM Group Corp.,Mid,VA,Alexandria,South,False,False,False,1980,309,236220,Net 30,True,True,Low,0.97,True,Bronze,188,B,76-5956897
+VEN-0019,Brightwater Engineering LLC,Large,NY,Buffalo,Northeast,False,False,False,2006,862,541330,Net 30,True,True,Medium,1.36,True,Unrated,188,C,99-6486963
+VEN-0020,Brightwater Infrastructure Group LLP,Small,MO,St. Louis,Midwest,True,False,True,2012,13,541330,Net 60,True,True,Low,0.87,True,Silver,182,A,15-9840167
+VEN-0021,Brightwater Partners Corp.,National,CA,Los Angeles,West,False,False,False,1976,8290,541611,Net 60,True,True,Low,0.61,True,Platinum,157,A,74-4178552
+VEN-0022,Brightwater Project Services LLC,Small,AK,Fairbanks,West,False,False,False,1990,40,236220,Net 30,True,False,Low,1.27,True,Gold,139,C,54-1912488
+VEN-0023,Cardinal CM Group Inc.,Mid,FL,Fort Lauderdale,South,False,False,False,1990,67,541380,Net 30,False,True,Medium,0.64,True,Silver,160,C,10-5416485
+VEN-0024,Cardinal Construction Services Inc.,Mid,OR,Salem,West,False,False,False,1963,228,541611,Net 30,True,True,Low,1.22,True,Platinum,151,A,61-1699055
+VEN-0025,Cardinal Consulting Engineers,Large,MD,Baltimore,South,False,False,False,1996,1627,541611,Net 60,True,True,Low,0.83,True,Gold,154,A,75-8201531
+VEN-0026,Cardinal Engineering,Large,OR,Portland,West,False,False,False,2003,970,541380,Net 45,False,True,Low,0.63,True,Platinum,152,C,67-1851952
+VEN-0027,Cardinal Partners LLC,Small,MO,St. Louis,Midwest,True,False,False,1992,48,541330,Net 30,True,True,Medium,0.8,True,Silver,158,A,36-4871109
+VEN-0028,Cardinal Program Management,Small,NV,Reno,West,False,False,False,1999,55,541330,Net 60,True,True,Low,1.19,True,Unrated,166,A,11-9093676
+VEN-0029,Castillo & Associates LLC,Mid,NY,Queens,Northeast,False,False,False,2007,308,541330,Net 30,False,True,Low,0.67,True,Silver,162,C,19-9499648
+VEN-0030,Castillo CM Group Inc.,Mid,MD,Baltimore,South,True,True,False,1981,197,541330,Net 30,True,True,Low,0.69,True,Bronze,163,C,60-1416652
+VEN-0031,Castillo Consulting Engineers Inc.,Small,CO,Colorado Springs,West,False,False,False,1958,18,236220,Net 30,True,True,Low,1.34,True,Silver,199,B,57-2090139
+VEN-0032,Castillo Consulting Engineers LLC,Large,CA,Fresno,West,False,False,True,2000,2813,236220,Net 30,True,True,High,0.95,True,Silver,173,C,13-7711585
+VEN-0033,Castillo Engineering Inc.,Small,OR,Portland,West,False,False,False,1961,43,541618,Net 30,True,True,Low,0.84,True,Silver,180,C,93-5004134
+VEN-0034,Castillo Partners LLC,Small,MD,Baltimore,South,True,False,False,1993,27,541330,Net 30,True,True,Medium,0.94,True,Gold,158,A,32-6737056
+VEN-0035,Coastal CM Group,Mid,NY,Buffalo,Northeast,False,False,False,1984,106,541380,Net 30,True,True,Low,0.65,True,Silver,151,A,97-9445579
+VEN-0036,Coastal Consulting Engineers LLC,Mid,AK,Fairbanks,West,False,False,False,2010,382,541330,Net 30,True,True,Medium,1.24,False,Bronze,152,A,19-7568633
+VEN-0037,Coastal Consulting Engineers PC,Small,CT,Hartford,Northeast,True,False,False,1999,60,541611,Net 30,True,True,Low,0.7,True,Platinum,162,B,26-5224401
+VEN-0038,Coastal Engineering,National,AZ,Phoenix,West,False,False,False,1996,6674,541330,Net 60,True,True,Low,1.37,True,Gold,168,C,77-4938755
+VEN-0039,Crescent Program Management PC,Large,PA,Pittsburgh,Northeast,False,False,False,1963,519,236220,Net 30,True,True,Low,0.99,True,Bronze,162,B,97-7649787
+VEN-0040,Crescent Technical Services LLP,Mid,MO,St. Louis,Midwest,False,False,False,2006,63,236220,Net 30,True,True,Medium,1.32,True,Platinum,166,A,60-1911982
+VEN-0041,Delta CM Group LLC,Large,GA,Savannah,South,False,False,False,2004,2841,541330,Net 30,False,False,Low,0.75,False,Bronze,171,A,49-7352179
+VEN-0042,Delta Infrastructure Group LLC,Small,AZ,Tempe,West,False,False,False,2006,31,541330,Net 30,True,True,Low,1.24,True,Bronze,160,A,57-8488468
+VEN-0043,Delta Program Management LLP,Small,AK,Fairbanks,West,True,True,True,1962,20,541330,Net 45,True,True,Medium,0.87,True,Unrated,188,A,43-6309714
+VEN-0044,Delta Project Services Corp.,National,DC,Washington,South,False,False,False,2003,22515,541611,Net 60,False,True,Low,0.94,True,Bronze,164,A,11-6088777
+VEN-0045,Delta Technical Services Corp.,Small,AZ,Tucson,West,False,True,False,2006,60,541330,Net 30,True,True,Low,1.04,True,Bronze,213,A,19-5444138
+VEN-0046,Eastman & Associates Inc.,Large,AK,Anchorage,West,False,False,False,1997,1253,541380,Net 60,True,True,Medium,1.21,True,Silver,165,B,45-5490688
+VEN-0047,Eastman CM Group LLC,Small,GA,Savannah,South,True,False,False,1978,31,541330,Net 30,True,False,Low,0.79,True,Bronze,149,A,23-1075364
+VEN-0048,Eastman Program Management LLP,Small,PA,Philadelphia,Northeast,False,False,False,1970,38,541330,Net 30,True,True,Low,0.81,True,Platinum,159,A,91-6866986
+VEN-0049,Everett Construction Services LLP,Small,MD,Frederick,South,True,False,False,2010,21,541330,Net 30,True,True,Low,1.1,True,Platinum,172,C,80-9111901
+VEN-0050,Everett Infrastructure Group Corp.,Mid,NV,Las Vegas,West,False,False,False,1976,268,541380,Net 30,True,False,Low,1.05,True,Bronze,160,A,56-4308493
+VEN-0051,Everett Technical Services,National,MA,Boston,Northeast,False,False,False,1987,3192,541330,Net 30,True,True,Low,1.25,True,Unrated,161,B,74-3880407
+VEN-0052,Falcon & Associates Inc.,Mid,CT,New Haven,Northeast,False,False,False,2009,238,541330,Net 30,True,True,Low,1.33,True,Unrated,161,C,21-3688987
+VEN-0053,Falcon Consulting Engineers LLC,National,AK,Anchorage,West,False,True,False,1968,16254,541611,Net 30,True,True,High,1.25,True,Unrated,155,A,95-6439220
+VEN-0054,Falcon Infrastructure Group Inc.,Small,FL,Orlando,South,True,False,False,1982,15,541380,Net 30,True,True,Low,0.6,False,Bronze,170,A,67-8688814
+VEN-0055,Falcon Infrastructure Group LLP,Small,NV,Reno,West,False,False,False,1960,19,541380,Net 30,True,False,Low,1.18,True,Unrated,170,C,93-3284817
+VEN-0056,Foxhall Construction Services Corp.,Mid,OK,Oklahoma City,South,False,False,False,1972,93,541330,Net 30,True,True,Low,0.86,True,Bronze,179,A,42-9425818
+VEN-0057,Foxhall Infrastructure Group PC,National,NV,Las Vegas,West,False,False,False,1975,11613,541380,Net 30,True,True,Medium,0.81,True,Platinum,196,B,67-9748521
+VEN-0058,Foxhall Partners LLC,Large,CO,Colorado Springs,West,False,False,False,1967,1432,236220,Net 45,True,True,Low,1.09,False,Silver,163,B,49-6245376
+VEN-0059,Foxhall Program Management,Mid,PA,Harrisburg,Northeast,False,False,True,1989,60,541330,Net 30,True,True,Low,1.05,True,Unrated,163,B,78-4762441
+VEN-0060,Granite CM Group LLP,Mid,OK,Oklahoma City,South,False,True,False,1973,358,541380,Net 45,True,True,Medium,1.3,True,Bronze,150,B,11-1941714
+VEN-0061,Granite Construction Services Corp.,Large,VA,Chesapeake,South,False,False,False,1960,1834,541330,Net 60,True,True,Low,0.65,True,Platinum,153,A,28-7931981
+VEN-0062,Granite Engineering Inc.,Small,TX,Houston,South,False,False,True,1998,20,541330,Net 45,False,True,Low,1.03,True,Bronze,150,C,20-8591476
+VEN-0063,Granite Engineering PC,Small,MA,Springfield,Northeast,True,False,False,1974,19,541380,Net 30,True,True,Medium,1.15,True,Silver,213,B,92-4640580
+VEN-0064,Granite Infrastructure Group Inc.,Mid,MA,Boston,Northeast,False,False,False,1982,319,236220,Net 45,True,True,Medium,1.34,False,Unrated,165,C,70-9902297
+VEN-0065,Granite Partners,National,NM,Albuquerque,West,False,False,False,1994,17326,541330,Net 45,True,True,Low,1.34,True,Gold,164,A,13-1698761
+VEN-0066,Granite Program Management,Mid,MO,Kansas City,Midwest,False,False,False,1992,389,541380,Net 30,True,True,High,1.36,True,Gold,160,A,24-1568087
+VEN-0067,Granite Program Management LLP,Mid,WA,Tacoma,West,False,False,False,1974,384,541330,Net 30,True,False,Low,1.21,True,Unrated,156,C,46-1519780
+VEN-0068,Granite Project Services LLP,Mid,TX,Dallas,South,False,False,False,2010,271,541330,Net 30,True,True,Low,1.02,True,Platinum,158,A,54-9234643
+VEN-0069,Greenfield Partners PC,Small,OR,Portland,West,True,False,False,2002,14,541330,Net 30,True,True,Medium,0.66,True,Unrated,179,A,90-6480180
+VEN-0070,Greenfield Project Services Corp.,Small,TX,Dallas,South,False,False,False,1985,30,541618,Net 30,True,True,Medium,0.79,True,Unrated,197,A,54-6480448
+VEN-0071,Greenfield Technical Services,Large,NV,Reno,West,False,False,False,1987,2244,541380,Net 30,False,True,Low,0.84,True,Unrated,167,A,29-5153720
+VEN-0072,Greenfield Technical Services LLC,Large,OH,Cincinnati,Midwest,True,False,False,1964,2869,541330,Net 60,False,True,Low,1.39,True,Silver,155,C,45-4291537
+VEN-0073,Harland Infrastructure Group LLP,Small,NM,Santa Fe,West,True,False,False,1972,14,541618,Net 30,False,True,Low,0.81,True,Platinum,168,A,65-8065805
+VEN-0074,Hollis & Associates,National,OR,Salem,West,False,False,False,1984,10490,541330,Net 30,True,True,Medium,0.8,True,Bronze,167,A,89-7867663
+VEN-0075,Hollis CM Group Inc.,Small,NY,Buffalo,Northeast,False,True,False,1968,41,541380,Net 45,True,False,Low,0.68,True,Unrated,148,A,70-9593141
+VEN-0076,Hollis Construction Services,Mid,MD,Frederick,South,True,False,False,1965,387,541380,Net 30,False,True,Low,0.82,True,Platinum,179,A,63-8055608
+VEN-0077,Hollis Partners Corp.,Small,CO,Denver,West,True,False,False,1987,48,541330,Net 30,True,False,Low,1.24,True,Unrated,166,A,28-6924567
+VEN-0078,Hollis Program Management Corp.,Mid,WA,Bellevue,West,False,False,False,1975,387,541380,Net 30,True,True,Low,0.75,True,Silver,170,B,41-6063703
+VEN-0079,Hollis Program Management PC,Large,WA,Tacoma,West,False,False,False,1961,2386,541330,Net 45,True,False,Medium,0.71,True,Unrated,161,A,94-1192586
+VEN-0080,Horizon & Associates LLP,Small,MD,Baltimore,South,False,False,False,1967,21,541330,Net 45,False,True,Low,1.31,True,Platinum,185,B,35-9295688
+VEN-0081,Horizon Construction Services PC,Mid,LA,New Orleans,South,False,False,False,1966,169,541611,Net 45,True,True,Low,0.72,True,Bronze,158,A,79-1110843
+VEN-0082,Horizon Engineering LLP,Mid,MD,Rockville,South,False,False,False,1962,224,541330,Net 30,True,True,Low,1.09,True,Silver,176,A,75-9123047
+VEN-0083,Horizon Infrastructure Group Inc.,Mid,UT,Ogden,West,True,False,False,1993,133,541330,Net 30,True,True,Low,0.64,True,Silver,173,C,61-6598923
+VEN-0084,Horizon Technical Services PC,Mid,CA,Riverside,West,True,False,False,1966,199,541618,Net 45,False,True,High,0.92,True,Bronze,159,A,61-6039983
+VEN-0085,Ironwood & Associates Corp.,Small,TX,Dallas,South,False,False,False,1997,14,541611,Net 45,True,True,Medium,1.08,True,Gold,183,A,95-8681940
+VEN-0086,Ironwood CM Group Corp.,Large,OH,Columbus,Midwest,False,False,False,2008,815,236220,Net 45,True,True,Low,0.94,True,Bronze,171,A,73-9760290
+VEN-0087,Ironwood Partners Inc.,Mid,CT,New Haven,Northeast,False,False,False,2000,120,541330,Net 30,True,True,Low,1.12,True,Gold,172,A,64-1080250
+VEN-0088,Ironwood Technical Services PC,Large,TX,El Paso,South,False,False,False,1969,761,541330,Net 30,True,True,Medium,0.72,True,Silver,181,C,68-5262261
+VEN-0089,Juniper CM Group,Small,PA,Philadelphia,Northeast,True,False,False,1996,11,541330,Net 45,False,True,Medium,0.85,False,Bronze,170,C,96-3792907
+VEN-0090,Juniper CM Group Inc.,Small,CT,New Haven,Northeast,True,False,False,1994,17,236220,Net 30,True,True,High,1.16,True,Silver,149,A,29-6177410
+VEN-0091,Juniper Construction Services,Small,DC,Washington,South,False,False,False,1958,45,236220,Net 45,True,True,Low,1.25,True,Platinum,150,B,28-3466234
+VEN-0092,Juniper Consulting Engineers LLP,Mid,OR,Salem,West,False,False,False,1972,340,236220,Net 30,True,True,Low,0.77,True,Platinum,179,C,68-2471378
+VEN-0093,Kessler Construction Services,Mid,VA,Alexandria,South,False,False,False,1970,241,541330,Net 30,True,True,Medium,0.83,True,Silver,159,C,76-3499956
+VEN-0094,Kessler Program Management,Mid,MO,St. Louis,Midwest,False,False,False,1980,82,236220,Net 30,True,True,Low,1.39,True,Bronze,161,A,43-5694675
+VEN-0095,Kessler Project Services LLC,Mid,DC,Washington,South,False,False,False,1982,109,541330,Net 30,True,True,Low,1.16,True,Platinum,162,C,25-2509230
+VEN-0096,Kessler Technical Services LLC,Large,FL,Orlando,South,False,False,False,1981,2712,541330,Net 30,False,True,Low,0.8,True,Unrated,166,A,16-5326898
+VEN-0097,Keystone & Associates LLC,National,CO,Denver,West,False,False,False,1995,4827,541611,Net 30,True,True,Low,0.81,True,Bronze,177,C,31-8405208
+VEN-0098,Keystone CM Group PC,Small,CO,Denver,West,True,True,False,1981,23,541380,Net 30,True,True,Low,1.34,True,Platinum,145,C,53-6411752
+VEN-0099,Keystone Partners Inc.,Mid,MD,Baltimore,South,False,False,False,1967,179,541611,Net 30,False,True,Low,0.72,True,Silver,154,B,31-5373352
+VEN-0100,Keystone Technical Services,Small,AZ,Phoenix,West,True,False,False,1971,39,541618,Net 60,True,True,Low,0.76,True,Silver,170,A,40-2636866
+VEN-0101,Kinsley CM Group Inc.,Small,PA,Harrisburg,Northeast,False,True,False,1979,32,541618,Net 30,True,True,Medium,1.02,True,Bronze,162,A,62-4661877
+VEN-0102,Kinsley CM Group LLP,Small,CA,Oakland,West,False,False,True,1963,25,541618,Net 30,True,True,Low,0.71,True,Gold,174,B,35-1168382
+VEN-0103,Kinsley Consulting Engineers Inc.,Large,CO,Colorado Springs,West,False,True,False,2006,2071,541611,Net 30,True,True,Low,1.05,False,Platinum,149,A,99-7227120
+VEN-0104,Kinsley Partners PC,Large,OK,Oklahoma City,South,False,False,False,2011,419,236220,Net 30,True,True,Low,1.32,True,Platinum,156,C,67-9611981
+VEN-0105,Kinsley Program Management PC,Mid,AK,Anchorage,West,False,False,False,1993,331,541330,Net 30,True,False,Medium,0.81,True,Unrated,153,C,76-4999140
+VEN-0106,Kinsley Technical Services LLP,Large,PA,Philadelphia,Northeast,False,False,False,2006,821,236220,Net 30,True,True,Medium,1.03,True,Gold,161,A,95-8751991
+VEN-0107,Lakeshore Construction Services Inc.,Large,MA,Springfield,Northeast,False,False,False,1961,1073,236220,Net 30,True,True,Low,0.95,False,Silver,158,C,81-1898473
+VEN-0108,Lakeshore Consulting Engineers,Mid,GA,Savannah,South,False,True,False,1978,324,541611,Net 30,True,True,Low,0.94,True,Bronze,171,A,15-1576694
+VEN-0109,Lakeshore Engineering Inc.,Large,AK,Anchorage,West,False,False,False,1985,1488,541330,Net 60,False,True,Low,1.12,True,Unrated,169,B,20-8825183
+VEN-0110,Lakeshore Partners LLP,Small,CT,New Haven,Northeast,False,False,False,2005,45,541330,Net 30,True,True,Low,1.16,True,Bronze,146,A,80-7154113
+VEN-0111,Lakeshore Project Services Corp.,Large,MO,Kansas City,Midwest,False,False,False,1982,1643,541618,Net 30,True,False,Low,1.36,True,Silver,149,C,44-5778486
+VEN-0112,Linden Program Management,Large,FL,Orlando,South,False,False,False,2011,633,541611,Net 45,True,True,Low,1.39,True,Gold,176,C,53-6913200
+VEN-0113,Marlow Construction Services Inc.,Mid,NM,Santa Fe,West,False,False,False,1998,163,541380,Net 30,True,True,Low,1.21,True,Bronze,162,C,83-3510426
+VEN-0114,Marlow Infrastructure Group Inc.,Mid,AZ,Tempe,West,False,False,False,1983,203,541618,Net 30,True,True,Low,1.23,True,Bronze,144,C,66-6033546
+VEN-0115,Marlow Partners,Mid,FL,Tampa,South,False,False,False,2011,334,541330,Net 30,False,True,Low,1.33,True,Platinum,152,B,82-9343936
+VEN-0116,Meridian Consulting Engineers,Small,OH,Toledo,Midwest,True,False,False,1996,27,541380,Net 45,True,False,Medium,1.02,True,Silver,172,C,93-3587389
+VEN-0117,Meridian Consulting Engineers LLC,Small,MA,Worcester,Northeast,True,False,False,1963,20,541330,Net 60,True,True,Low,0.85,True,Silver,173,B,75-8061314
+VEN-0118,Meridian Infrastructure Group LLP,Mid,OK,Tulsa,South,False,False,False,1996,140,541330,Net 45,True,False,Medium,0.63,True,Platinum,175,B,98-1065650
+VEN-0119,Meridian Partners Inc.,Mid,WV,Huntington,South,False,False,False,1990,263,541330,Net 30,True,True,Low,0.73,True,Platinum,164,A,22-2277250
+VEN-0120,Meridian Partners PC,Mid,LA,New Orleans,South,False,False,False,1967,327,541380,Net 30,True,True,Low,1.1,True,Unrated,163,A,54-4215400
+VEN-0121,Meridian Program Management LLC,Mid,CA,Fresno,West,False,False,False,1973,379,541330,Net 30,True,False,Medium,0.85,True,Bronze,170,B,63-5227316
+VEN-0122,Meridian Project Services Inc.,Small,CA,San Jose,West,True,False,False,2008,39,541330,Net 30,True,True,Low,0.61,True,Bronze,151,B,24-6620611
+VEN-0123,Northgate & Associates LLC,Mid,CT,New Haven,Northeast,False,False,False,1987,257,236220,Net 30,True,True,Low,0.62,True,Gold,169,A,21-4293304
+VEN-0124,Northgate Construction Services LLP,Small,UT,Salt Lake City,West,False,False,False,1983,25,541611,Net 45,True,True,Low,0.98,True,Bronze,189,A,43-8387792
+VEN-0125,Northgate Engineering PC,Small,CA,San Diego,West,False,True,False,1992,45,236220,Net 30,True,True,Low,1.17,True,Platinum,167,C,21-3970359
+VEN-0126,Northgate Infrastructure Group PC,National,WV,Huntington,South,False,False,False,1970,9170,541330,Net 30,True,True,Low,1.25,True,Silver,168,C,69-3217408
+VEN-0127,Northgate Partners Inc.,Small,LA,Baton Rouge,South,True,True,False,1987,25,541330,Net 30,False,True,High,0.68,True,Silver,157,A,96-1678669
+VEN-0128,Northgate Project Services LLC,Small,GA,Atlanta,South,True,False,False,1969,33,541618,Net 30,True,True,Medium,0.8,True,Unrated,167,B,10-2876902
+VEN-0129,Norwood Construction Services Corp.,Mid,MA,Boston,Northeast,False,False,True,1978,395,541330,Net 30,True,True,High,0.93,True,Unrated,151,A,45-9847038
+VEN-0130,Norwood Construction Services LLC,Small,MD,Frederick,South,True,False,False,2001,13,541380,Net 45,True,True,Medium,1.22,True,Gold,163,A,99-5382167
+VEN-0131,Norwood Technical Services LLC,Mid,VA,Norfolk,South,False,False,False,1970,339,541380,Net 60,True,True,Medium,1.14,True,Gold,176,A,75-8466381
+VEN-0132,Oakridge & Associates PC,Small,NM,Albuquerque,West,True,False,False,1993,16,541611,Net 30,True,True,Medium,1.08,True,Bronze,182,A,24-5854322
+VEN-0133,Oakridge CM Group,Mid,DC,Washington,South,False,False,False,1965,244,541330,Net 30,True,True,Low,0.73,True,Platinum,165,C,72-2408812
+VEN-0134,Oakridge Program Management Inc.,Large,OK,Oklahoma City,South,False,False,False,1980,2708,541330,Net 30,True,True,High,1.12,True,Gold,158,A,27-1464200
+VEN-0135,Oakridge Project Services Inc.,Mid,NV,Las Vegas,West,False,True,False,1977,262,541380,Net 30,True,True,Medium,0.88,True,Gold,175,B,42-5016125
+VEN-0136,Pinnacle & Associates Inc.,Small,CO,Colorado Springs,West,True,False,False,1989,11,541611,Net 60,True,True,Low,1.06,True,Gold,155,A,27-8435467
+VEN-0137,Pinnacle Consulting Engineers,Mid,LA,Baton Rouge,South,False,True,False,2012,265,541618,Net 30,True,True,Medium,1.01,True,Silver,157,A,66-1147604
+VEN-0138,Pinnacle Consulting Engineers Corp.,Small,AK,Fairbanks,West,False,False,False,1992,50,236220,Net 30,True,True,Low,1.1,True,Bronze,170,A,17-6562348
+VEN-0139,Pinnacle Project Services LLP,Small,DC,Washington,South,True,False,False,1998,46,541330,Net 30,True,True,Medium,1.15,True,Unrated,166,B,81-7985645
+VEN-0140,Prescott CM Group Inc.,National,FL,Miami,South,False,False,False,2011,21507,236220,Net 30,True,True,Medium,1.17,True,Bronze,162,A,79-2896124
+VEN-0141,Prescott Consulting Engineers,Mid,CO,Colorado Springs,West,False,True,False,1990,322,541380,Net 30,True,False,Medium,1.37,True,Bronze,186,C,79-3873185
+VEN-0142,Prescott Engineering,National,TX,Houston,South,False,True,True,2002,6051,541618,Net 30,False,True,Low,0.71,True,Platinum,151,A,82-2924530
+VEN-0143,Prescott Infrastructure Group,Small,CO,Denver,West,True,False,False,1981,54,541618,Net 45,True,False,Medium,0.63,True,Platinum,153,B,80-6492224
+VEN-0144,Prescott Program Management,Large,UT,Salt Lake City,West,False,False,True,1995,862,541611,Net 30,True,True,Low,1.24,True,Unrated,149,B,97-7389115
+VEN-0145,Prescott Project Services Corp.,Large,MA,Worcester,Northeast,False,True,False,1967,1425,541611,Net 30,True,True,Medium,0.63,True,Unrated,178,C,70-3655557
+VEN-0146,Prescott Project Services LLC,Small,UT,Ogden,West,True,False,False,1966,52,541618,Net 30,True,True,Medium,1.18,True,Bronze,153,C,55-6274081
+VEN-0147,Quarry CM Group PC,National,WA,Seattle,West,False,False,False,1967,18841,236220,Net 30,True,True,High,0.89,True,Unrated,160,A,99-1572297
+VEN-0148,Quarry Consulting Engineers LLP,Small,AK,Fairbanks,West,False,False,False,2008,43,541330,Net 30,True,True,Medium,1.19,True,Gold,146,B,80-7810919
+VEN-0149,Quarry Engineering PC,Small,CO,Denver,West,True,False,False,1967,29,541330,Net 30,True,True,Medium,0.92,True,Silver,170,A,85-2112753
+VEN-0150,Quarry Project Services LLC,Mid,CA,Riverside,West,False,True,False,1963,214,541618,Net 60,True,True,High,0.89,True,Bronze,179,A,72-6356248
+VEN-0151,Redwood CM Group PC,Small,NV,Las Vegas,West,False,False,False,1970,19,541618,Net 30,True,True,Low,0.79,True,Gold,165,A,20-2232198
+VEN-0152,Redwood Consulting Engineers Inc.,Small,AK,Anchorage,West,True,False,False,1971,59,236220,Net 30,True,True,Medium,0.92,True,Silver,154,A,17-7950328
+VEN-0153,Redwood Consulting Engineers LLC,Large,NY,Brooklyn,Northeast,False,False,False,1958,757,541330,Net 60,False,True,High,0.64,True,Silver,161,A,21-1312078
+VEN-0154,Redwood Partners,Small,CO,Colorado Springs,West,False,False,False,1993,17,541330,Net 45,True,True,Low,1.19,True,Bronze,176,A,92-6188400
+VEN-0155,Ridgeline Consulting Engineers,Small,CT,Hartford,Northeast,True,False,False,1964,49,541380,Net 60,True,False,Low,1.1,True,Platinum,155,A,89-3250547
+VEN-0156,Ridgeline Consulting Engineers PC,Large,OH,Cincinnati,Midwest,False,False,False,2005,2625,541330,Net 30,True,True,Medium,0.95,True,Gold,159,B,59-8719179
+VEN-0157,Ridgeline Infrastructure Group Corp.,Large,NM,Santa Fe,West,False,False,False,1972,508,541618,Net 45,True,False,Low,1.13,True,Platinum,159,B,12-5401012
+VEN-0158,Ridgeline Technical Services Corp.,Small,MD,Rockville,South,False,False,False,1971,53,541618,Net 30,True,True,High,1.22,False,Gold,158,B,46-2483658
+VEN-0159,Rowan Construction Services Corp.,Mid,TX,San Antonio,South,False,False,True,2008,62,541330,Net 30,False,True,Low,1.22,True,Bronze,162,A,48-1409768
+VEN-0160,Rowan Infrastructure Group LLP,Small,UT,Ogden,West,False,True,False,2001,59,541611,Net 30,True,True,High,1.17,True,Platinum,167,A,35-1257628
+VEN-0161,Rowan Partners Inc.,Small,AZ,Phoenix,West,True,True,False,1962,10,541330,Net 30,True,True,Low,0.94,True,Unrated,150,A,91-9400835
+VEN-0162,Rowan Partners LLP,Mid,UT,Salt Lake City,West,False,False,False,1969,331,541330,Net 60,True,True,Low,1.01,True,Unrated,154,B,44-1177672
+VEN-0163,Rowan Project Services LLP,Small,PA,Harrisburg,Northeast,True,False,False,1978,28,541618,Net 30,True,False,Low,0.91,True,Gold,175,A,40-9406248
+VEN-0164,Sierra Consulting Engineers Corp.,Mid,CO,Denver,West,False,False,True,2002,372,541618,Net 30,True,True,Low,0.85,False,Platinum,167,C,92-8895487
+VEN-0165,Sierra Consulting Engineers PC,Small,DC,Washington,South,False,False,True,1991,40,236220,Net 30,True,True,Low,1.1,True,Gold,168,B,43-8940262
+VEN-0166,Sierra Partners,Small,AZ,Tucson,West,False,False,False,1968,54,236220,Net 30,True,True,Medium,0.97,True,Platinum,172,B,58-7069374
+VEN-0167,Sierra Technical Services PC,Large,CO,Colorado Springs,West,False,False,False,1977,903,541611,Net 30,True,True,Low,0.96,True,Bronze,176,A,76-3514577
+VEN-0168,Stonebridge CM Group LLC,Mid,GA,Savannah,South,False,False,False,1993,126,541330,Net 30,True,True,Low,0.85,True,Silver,170,B,40-5452740
+VEN-0169,Stonebridge Engineering,Mid,GA,Savannah,South,False,False,False,1960,106,541380,Net 30,True,True,Medium,0.84,True,Unrated,172,B,55-5003478
+VEN-0170,Stonebridge Engineering PC,Small,OK,Tulsa,South,True,True,False,1962,32,541330,Net 45,True,True,Low,1.0,True,Platinum,166,A,85-8760155
+VEN-0171,Stonebridge Partners Corp.,Mid,UT,Salt Lake City,West,False,False,False,2000,283,541330,Net 30,True,True,Low,1.14,True,Bronze,173,C,25-2510822
+VEN-0172,Stonebridge Technical Services Inc.,Small,DC,Washington,South,False,True,False,2003,22,236220,Net 45,True,True,Medium,0.93,True,Bronze,158,A,90-3441495
+VEN-0173,Summit Construction Services Inc.,National,LA,Baton Rouge,South,False,True,False,2000,19981,236220,Net 30,True,True,Low,0.64,True,Bronze,167,C,79-5313166
+VEN-0174,Summit Infrastructure Group LLC,Small,AK,Fairbanks,West,True,False,False,2009,27,236220,Net 60,True,False,Low,0.64,True,Unrated,146,A,62-6428334
+VEN-0175,Summit Project Services PC,Large,OR,Salem,West,False,False,False,1971,1299,541330,Net 45,True,True,Medium,0.64,True,Platinum,183,C,33-1238085
+VEN-0176,Sutton Partners Inc.,Mid,CT,Hartford,Northeast,False,False,False,2007,347,541380,Net 45,True,True,Low,1.23,False,Bronze,154,A,94-5321640
+VEN-0177,Sutton Partners PC,Mid,OH,Cleveland,Midwest,True,False,False,1972,286,541618,Net 30,True,True,Medium,0.85,True,Unrated,167,A,29-4872462
+VEN-0178,Sutton Project Services LLP,Large,NY,Buffalo,Northeast,False,False,False,1969,1741,541611,Net 30,True,True,Low,0.88,True,Gold,144,A,47-9219424
+VEN-0179,Sutton Technical Services,Mid,WA,Seattle,West,True,False,False,2007,69,541330,Net 30,True,True,Low,0.68,True,Gold,180,A,94-6033570
+VEN-0180,Sutton Technical Services Inc.,Small,UT,Salt Lake City,West,True,True,False,2009,11,541330,Net 45,True,True,Medium,0.69,True,Bronze,172,C,14-1565846
+VEN-0181,Tidewater CM Group Corp.,Mid,AZ,Tempe,West,False,True,False,2004,322,541330,Net 30,True,True,Low,0.6,True,Bronze,159,B,29-5383567
+VEN-0182,Tidewater Construction Services LLP,Mid,OH,Cincinnati,Midwest,False,False,False,1992,114,541330,Net 30,True,True,Low,0.92,True,Gold,150,A,78-9418745
+VEN-0183,Tidewater Engineering LLC,Mid,OH,Cleveland,Midwest,False,False,False,2006,108,541330,Net 45,True,True,Low,0.91,True,Silver,160,A,20-4651120
+VEN-0184,Tidewater Infrastructure Group LLP,Small,LA,Baton Rouge,South,False,False,True,1997,22,541380,Net 30,True,True,Low,1.21,True,Gold,144,A,50-7911706
+VEN-0185,Tidewater Program Management LLC,Large,NY,Rochester,Northeast,False,False,False,1966,532,541330,Net 30,True,True,Low,1.38,False,Bronze,160,A,73-9817313
+VEN-0186,Tidewater Project Services,Small,OH,Cincinnati,Midwest,False,False,True,2003,57,236220,Net 30,True,True,Low,1.22,True,Silver,176,B,16-8820753
+VEN-0187,Tidewater Project Services LLC,Small,NY,Queens,Northeast,True,False,False,1992,58,541380,Net 60,False,True,High,1.23,True,Gold,166,A,35-8682367
+VEN-0188,Tremont & Associates Corp.,Small,CT,New Haven,Northeast,True,False,False,1998,43,541380,Net 45,True,True,Low,1.36,True,Silver,164,C,49-1075419
+VEN-0189,Tremont Partners LLC,Mid,WA,Bellevue,West,False,False,False,1979,310,541618,Net 30,True,True,Medium,1.1,True,Platinum,183,B,33-8416054
+VEN-0190,Tremont Project Services LLP,Small,MO,St. Louis,Midwest,False,False,False,1967,34,236220,Net 30,True,True,Medium,1.31,False,Silver,152,C,50-9501918
+VEN-0191,Upland CM Group Corp.,Small,CA,Fresno,West,False,False,False,2009,58,541380,Net 45,True,True,Low,1.04,True,Unrated,156,C,27-5250360
+VEN-0192,Upland Construction Services Corp.,Mid,CA,Riverside,West,False,False,False,2001,273,541611,Net 60,False,True,Low,1.12,True,Platinum,161,A,97-2997397
+VEN-0193,Vantage & Associates LLP,Small,MO,Kansas City,Midwest,True,True,False,1966,43,541330,Net 45,False,True,Low,1.07,True,Platinum,166,C,32-5712242
+VEN-0194,Vantage CM Group Inc.,Small,OR,Portland,West,False,False,False,1982,48,541611,Net 30,False,True,Medium,0.82,True,Unrated,157,C,16-9932038
+VEN-0195,Vantage Construction Services LLP,Mid,OK,Oklahoma City,South,False,False,False,1995,131,236220,Net 30,False,True,Low,1.15,True,Bronze,166,A,89-6383792
+VEN-0196,Vantage Infrastructure Group,Large,DC,Washington,South,False,False,False,1997,844,541611,Net 45,True,True,Low,1.31,True,Silver,155,C,94-7907570
+VEN-0197,Vera CM Group LLC,Small,GA,Savannah,South,True,False,False,1986,56,541330,Net 30,True,True,Low,0.88,False,Silver,173,A,18-2617393
+VEN-0198,Vera Construction Services Inc.,Small,TX,Dallas,South,False,False,False,2008,56,541380,Net 30,True,True,Low,0.87,True,Gold,164,C,95-5844301
+VEN-0199,Vera Consulting Engineers PC,Large,DC,Washington,South,False,False,False,1994,1787,541380,Net 30,True,True,Medium,1.27,True,Gold,172,A,46-1561560
+VEN-0200,Vera Program Management LLP,Large,WV,Huntington,South,False,False,False,1996,1960,541618,Net 45,True,True,Low,0.68,True,Platinum,174,B,12-9678343
+VEN-0201,Westbrook & Associates Corp.,Large,WV,Huntington,South,False,False,False,1995,1731,541618,Net 30,True,True,Low,0.97,True,Silver,180,B,52-9903545
+VEN-0202,Westbrook CM Group Corp.,Small,NM,Albuquerque,West,True,False,False,2009,44,541618,Net 45,True,True,High,0.82,True,Platinum,149,C,59-9591386
+VEN-0203,Westbrook CM Group Inc.,Mid,DC,Washington,South,False,False,False,1999,269,541611,Net 45,True,True,High,1.3,True,Gold,195,B,88-4186224
+VEN-0204,Westbrook Construction Services Inc.,Small,DC,Washington,South,True,False,False,2003,15,541380,Net 45,True,True,Low,1.16,False,Platinum,160,A,18-6937570
+VEN-0205,Westbrook Engineering Inc.,Mid,NM,Santa Fe,West,False,False,False,1978,273,236220,Net 30,True,True,Low,0.88,True,Bronze,156,A,53-2790127
+VEN-0206,Yardley CM Group PC,Large,TX,San Antonio,South,False,False,False,2012,2330,541330,Net 45,True,True,Low,0.88,True,Gold,154,B,76-8327405
+VEN-0207,Yardley Construction Services,National,MA,Springfield,Northeast,False,False,True,2010,17309,541330,Net 30,True,True,Medium,1.03,True,Silver,172,B,89-8747102
+VEN-0208,Yardley Construction Services LLC,National,MD,Baltimore,South,True,True,False,1970,3240,541611,Net 30,True,True,Medium,1.17,True,Platinum,163,A,70-3834910
+VEN-0209,Yardley Consulting Engineers PC,Mid,OK,Oklahoma City,South,False,False,False,1962,393,541380,Net 30,True,False,Low,0.91,True,Gold,161,A,41-2573656
+VEN-0210,Yardley Infrastructure Group Corp.,National,OK,Oklahoma City,South,False,False,True,1993,18287,541380,Net 60,True,True,Low,0.97,True,Platinum,170,A,33-3403388
+VEN-0211,Yardley Partners,Large,CO,Colorado Springs,West,False,False,True,2012,1066,541330,Net 45,True,True,Low,1.1,True,Unrated,159,A,16-5881584
+VEN-0212,Yardley Partners PC,Small,DC,Washington,South,False,False,False,2005,37,541330,Net 45,True,False,Medium,0.67,True,Platinum,183,A,40-2701487
+VEN-0213,Yardley Technical Services LLP,Small,NM,Santa Fe,West,False,False,True,1962,13,541330,Net 30,True,True,Low,1.02,True,Bronze,164,A,20-1361845
+VEN-0214,Yardley Technical Services PC,Large,MD,Rockville,South,False,False,False,1974,953,236220,Net 30,True,True,Low,0.73,True,Bronze,155,B,45-5190066
+VEN-0215,Zephyr & Associates Inc.,Small,PA,Pittsburgh,Northeast,True,True,False,1973,8,236220,Net 30,True,True,Low,1.26,True,Silver,159,B,18-3044431
+VEN-0216,Zephyr CM Group PC,Large,OR,Salem,West,False,False,False,2007,1266,541380,Net 30,True,True,Low,1.33,True,Silver,168,C,25-3957463
+VEN-0217,Zephyr Construction Services,Small,OH,Cleveland,Midwest,True,False,False,1963,47,541380,Net 45,False,True,Medium,1.12,True,Gold,176,A,86-2139709
+VEN-0218,Zephyr Consulting Engineers,National,GA,Savannah,South,False,True,False,2004,5553,541611,Net 30,True,True,Medium,1.34,True,Platinum,164,B,48-7623335
+VEN-0219,Zephyr Consulting Engineers Corp.,Mid,CO,Denver,West,False,True,False,1972,148,541330,Net 30,False,True,Medium,0.82,True,Gold,156,A,21-3651397
+VEN-0220,Zephyr Infrastructure Group LLP,Small,DC,Washington,South,False,False,True,1974,58,541380,Net 30,True,True,Low,0.84,True,Gold,143,B,56-3958298
