@@ -171,3 +171,95 @@ proposals.firm_name  =  solicitations.awarded_firm   (for the winning proposal)
 - Index `document_catalog.csv` fields (org_type, sector, state, doc_type, service_category) as filterable metadata on each PDF so semantic queries can be scoped, for example sector eq 'K-12 Education'.
 - Chunk the large PDFs (NYC DDC 289 pages, FTA 212 pages, Moscone 102 pages) by section header; evaluation criteria and insurance sections are small and easy to lose in page-size chunks.
 - The Clark County PDF is a scanned image and needs OCR enabled in the indexer.
+
+
+---
+
+# Part 2: Procurement and Supply Chain Questions
+
+Tables: `vendors`, `purchase_orders`, `invoices_payments`, `shipments_deliveries`, `vendor_scorecard`.
+Links: `vendors.firm_name = proposals.firm_name`; `purchase_orders.solicitation_id = solicitations.solicitation_id`;
+`invoices_payments.po_id` and `shipments_deliveries.po_id` = `purchase_orders.po_id`.
+
+## 5. Purchase history (Fabric)
+
+| # | Question | Tables |
+|---|---|---|
+| 83 | What is the total spend per vendor over the last five fiscal years, and who are the top 20? | purchase_orders |
+| 84 | How is spend split between on-contract task orders and off-contract purchases, by vendor size? | purchase_orders, vendors |
+| 85 | Which categories make up most of the spend with each vendor? | purchase_orders |
+| 86 | How many change orders were issued per vendor and what share of PO value do they add? | purchase_orders |
+| 87 | Which buyer agencies issue the most POs to DBE-certified vendors? | purchase_orders, vendors |
+| 88 | What is the average PO amount by procurement method and buyer org type? | purchase_orders |
+| 89 | Which vendors have the highest cancellation rate on POs? | purchase_orders |
+| 90 | For each awarded solicitation, how much has actually been ordered against the contract compared with the awarded amount? | purchase_orders, solicitations |
+| 91 | Which contracts have PO spend exceeding 110 percent of the awarded amount? | purchase_orders, solicitations |
+| 92 | How does spend per vendor trend year over year, and which vendors are growing fastest? | purchase_orders |
+
+## 6. Payment history and on-time payment (Fabric)
+
+| # | Question | Tables |
+|---|---|---|
+| 93 | What percentage of invoices are paid on time, by buyer org type? | invoices_payments, purchase_orders |
+| 94 | What is the average days-to-pay for each vendor, and which vendors wait longest? | invoices_payments |
+| 95 | Which buyer agencies pay latest on average, and how much late fee have they incurred? | invoices_payments |
+| 96 | What share of invoices are disputed per vendor, and what are the top dispute reasons? | invoices_payments |
+| 97 | How much early-payment discount was captured per fiscal year, and how much was offered but missed? | invoices_payments, purchase_orders |
+| 98 | What is the total retention currently withheld per vendor? | invoices_payments |
+| 99 | Are Net 60 invoices paid later relative to due date than Net 30 invoices? | invoices_payments |
+| 100 | Which payment methods are associated with the fastest payment? | invoices_payments |
+| 101 | Do federally funded POs get paid faster than locally funded ones? | invoices_payments, purchase_orders |
+| 102 | List the pending invoices older than 60 days with their vendor and buyer. | invoices_payments |
+| 103 | Which vendors have the most short-paid invoices, and what is the total short-paid amount? | invoices_payments |
+| 104 | How many approval cycles do disputed invoices go through compared with clean invoices? | invoices_payments |
+
+## 7. Supply chain, delivery and availability (Fabric)
+
+| # | Question | Tables |
+|---|---|---|
+| 105 | What is the on-time delivery rate per vendor for physical goods versus service deliverables? | shipments_deliveries |
+| 106 | What is the average lead time by item category and availability status at order? | shipments_deliveries |
+| 107 | Which destination states or regions experience the longest delivery delays? | shipments_deliveries |
+| 108 | Which carriers and transport modes have the best on-time and lowest damage rates? | shipments_deliveries |
+| 109 | How often are items on backorder at the time of ordering, by category and vendor? | shipments_deliveries |
+| 110 | What are the most common delay reasons, by region and season? | shipments_deliveries |
+| 111 | What is the average freight cost per mile by transport mode? | shipments_deliveries |
+| 112 | Which vendors ship from the farthest warehouses relative to project sites? | shipments_deliveries, vendors |
+| 113 | What percentage of deliveries are accepted with exceptions or rejected, by vendor? | shipments_deliveries |
+| 114 | Which items are most often returned or damaged? | shipments_deliveries |
+| 115 | For older solicitations (before 2015), what were the delivery times and on-time rates compared with recent ones? | shipments_deliveries, solicitations |
+| 116 | Which project sites (destination city) received the most equipment deliveries? | shipments_deliveries |
+| 117 | How many shipments are currently in transit or scheduled, by vendor? | shipments_deliveries |
+| 118 | What is the average stock level at order for items that ended up late? | shipments_deliveries |
+
+## 8. Vendor performance and cross-dataset (Fabric)
+
+| # | Question | Tables |
+|---|---|---|
+| 119 | Rank vendors by performance score for the latest fiscal year and show their win rate in proposals. | vendor_scorecard, proposals |
+| 120 | Do vendors with higher proposal technical scores also deliver on time more often? | proposals, vendor_scorecard |
+| 121 | Which vendors won contracts but have a high dispute rate or low in-full delivery rate? | solicitations, vendor_scorecard |
+| 122 | For a given issuing agency, list every vendor it has awarded, total spend, on-time payment rate and on-time delivery rate. | solicitations, purchase_orders, invoices_payments, shipments_deliveries |
+| 123 | Which sectors have the worst delivery performance and the slowest payments? | purchase_orders, invoices_payments, shipments_deliveries |
+| 124 | Which small or DBE vendors outperform national vendors on both delivery and dispute rate? | vendors, vendor_scorecard |
+| 125 | Has vendor performance improved or declined over the fiscal years for the top 10 vendors by spend? | vendor_scorecard |
+| 126 | Which vendors have an expired insurance certificate or high risk rating but still receive open POs? | vendors, purchase_orders |
+| 127 | Build a vendor 360 for one firm: contracts won, bid history, spend, payment behavior, delivery KPIs and scorecard trend. | all |
+| 128 | For upcoming RFPs in the water sector, which incumbent vendors have the best combined payment-dispute and delivery record? | solicitations, vendor_scorecard |
+
+## 9. Orchestrated (Fabric + Azure AI Search)
+
+| # | Question | Flow |
+|---|---|---|
+| 129 | The Sacramento EchoWater RFP sets specific insurance and retention terms. Do the invoices under contracts seeded by that PDF show retention withheld at that rate? | Search PDF terms, Fabric on invoices via source_doc_id |
+| 130 | Which RFPs require Primavera P6, and how much have the winning vendors spent on P6 licenses under those contracts? | Search, then Fabric on purchase_orders software category |
+| 131 | For contracts seeded by federal PDFs (GSA, VA, FTA), compare on-time payment against the prompt-payment language in those documents. | Both |
+| 132 | Draft a vendor performance clause for a new RFP using the delivery and dispute statistics of past winners in the same sector, citing the equivalent clauses from the Loudoun and Hampton PDFs. | Both |
+
+## Configuration tips for the procurement tables
+
+- Tell the Fabric agent that `paid_on_time`, `on_time_delivery` and `delivered_in_full` are empty strings when the invoice is unpaid or the shipment is not yet delivered, so rates should divide by non-empty counts.
+- `days_late` and `delivery_delay_days` are negative when early. Clarify that "late" means greater than zero.
+- `fiscal_year` runs July to June, so FY2020 is July 2019 through June 2020.
+- `solicitation_id` on purchase orders is empty for off-contract purchases; use it only for on-contract analysis.
+- `vendor_scorecard` is already aggregated. Prefer it for year-level KPI questions and the detail tables for drill-down.
